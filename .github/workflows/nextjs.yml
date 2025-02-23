@@ -75,6 +75,8 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Install missing type definitions
         run: npm install --save-dev @types/react-vertical-timeline-component
+      - name: Install Framer Motion with Legacy Peer Deps
+        run: npm install framer-motion --legacy-peer-deps
       - name: Set Environment Variables
         run: echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> $GITHUB_ENV
       - name: Build with Next.js
