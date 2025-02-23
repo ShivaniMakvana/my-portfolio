@@ -19,6 +19,7 @@ export async function POST(req: Request) {
       { status: 200 }
     );
   } catch (error) {
+    console.log("SENDGRID_API_KEY error:", process.env.SENDGRID_API_KEY);
     console.error("Email sending failed:", error);
     return NextResponse.json(
       { message: "Email sending failed", error },
